@@ -29,25 +29,34 @@ Este proyecto es un **sistema de gestión de pedidos**, desarrollado en el conte
 ## 📂 Estructura del proyecto (ejemplo)
 
 pedidos-grupo-17/
+
 │
+
 ├── src/
+
 │ ├── main/
+
 │ │ ├── java/
+
 │ │ │ └── com/miempresa/pedidos/
+
 │ │ │ ├── Pedido.java
+
 │ │ │ ├── Cliente.java
+
 │ │ │ ├── PedidoService.java
+
 │ │ │ └── App.java
+
 │ └── resources/
+
 │ └── application.properties
+
 │
+
 └── database/
+
 └── pedidos.sql
-
-yaml
-Copiar código
-
----
 
 ## 🚀 Cómo ejecutar
 
