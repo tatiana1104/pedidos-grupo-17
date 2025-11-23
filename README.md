@@ -1,75 +1,123 @@
-# pedidos
+# 📦 pedidos-grupo-17
 
-This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
-[initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
+Este proyecto es un **sistema de gestión de pedidos**, desarrollado en el contexto académico (grupo 17). Representa una aplicación para crear, consultar, actualizar y eliminar pedidos, lo que lo convierte en un buen ejemplo de sistema CRUD (Crear, Leer, Actualizar, Eliminar).
 
-## Install dependencies
+---
 
-By default, dependencies were installed when this application was generated.
-Whenever dependencies in `package.json` are changed, run the following command:
+## 🧰 Tecnologías (suposiciones)
 
-```sh
-npm install
+> ⚠️ Si alguna parte no es correcta, puedes modificarla según tu implementación real.
+
+- **Lenguaje principal**: Java (u otro, cambiar si es diferente)  
+- **Base de datos**: Posible uso de MySQL, PostgreSQL o SQLite  
+- **Framework / Librerías**: JDBC (o el que hayas usado)  
+- **Interfaz de usuario**: Consola, aplicación de escritorio o web, según tu proyecto  
+
+---
+
+## 🧭 Funcionalidades
+
+- Crear un nuevo pedido (cliente, producto, cantidad, precio)  
+- Listar todos los pedidos existentes  
+- Actualizar el estado de un pedido (por ejemplo, “pendiente”, “procesado”, “entregado”)  
+- Eliminar pedidos  
+- (Opcional) Filtrar pedidos por diferentes criterios  
+- Persistencia de datos a través de base de datos  
+
+---
+
+## 📂 Estructura del proyecto (ejemplo)
+
+pedidos-grupo-17/
+│
+├── src/
+│ ├── main/
+│ │ ├── java/
+│ │ │ └── com/miempresa/pedidos/
+│ │ │ ├── Pedido.java
+│ │ │ ├── Cliente.java
+│ │ │ ├── PedidoService.java
+│ │ │ └── App.java
+│ └── resources/
+│ └── application.properties
+│
+└── database/
+└── pedidos.sql
+
+yaml
+Copiar código
+
+---
+
+## 🚀 Cómo ejecutar
+
+1. Clona este repositorio:
+
+   ```bash
+   git clone https://github.com/tatiana1104/pedidos-grupo-17.git
+Entra en la carpeta del proyecto:
+
+   ```bash
+   cd pedidos-grupo-17
+   ```
+
+Entra en la carpeta del proyecto:
+Si usas Maven (o similar), instala dependencias:
+
+```bash
+mvn install
 ```
+Configura la base de datos:
 
-To only install resolved dependencies in `package-lock.json`:
+Importa database/pedidos.sql (si lo tienes) en tu sistema gestor de base de datos.
 
-```sh
-npm ci
+Ajusta la conexión (URL, usuario, contraseña) en application.properties u otro archivo de configuración.
+
+Ejecuta la aplicación:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.miempresa.pedidos.App"
 ```
+O abre la clase principal (App.java) desde tu IDE y ejecútala manualmente.
 
-## Run the application
+📈 Ejemplo de uso
+Al iniciar la aplicación, podrías ver un menú con opciones como:
 
-```sh
-npm start
-```
+1. Crear pedido
+2. Ver todos los pedidos
+3. Actualizar estado
+4. Eliminar pedido
+5. Salir
 
-You can also run `node .` to skip the build step.
+Cada pedido que crees se almacena en la base de datos, por lo que al cerrar y volver a abrir la aplicación, los pedidos persistirán.
 
-Open http://127.0.0.1:3000 in your browser.
+💡 Lecciones aprendidas / habilidades desarrolladas
+Implementación de un sistema CRUD con buenas prácticas.
 
-## Rebuild the project
+Conexión de aplicación con base de datos (persistencia).
 
-To incrementally build the project:
+Trabajo en equipo (grupo 17): coordinación, diseño colaborativo y división de tareas.
 
-```sh
-npm run build
-```
+Modelado de entidades como Pedido y Cliente.
 
-To force a full build by cleaning up cached artifacts:
+🔭 Posibles mejoras futuras
+Agregar autenticación para clientes o administradores.
 
-```sh
-npm run rebuild
-```
+Crear una interfaz web para gestionar los pedidos.
 
-## Fix code style and formatting issues
+Añadir notificaciones cuando cambie el estado del pedido.
 
-```sh
-npm run lint
-```
+Generar reportes o gráficos estadísticos (pedidos por cliente, por fecha, etc.).
 
-To automatically fix such issues:
+Implementar un historial de cambios de estado para cada pedido.
 
-```sh
-npm run lint:fix
-```
+👩‍💻 Contribuidoras
+J. Tatiana Vargas — parte del grupo 17
 
-## Other useful commands
+(Otros miembros del grupo, si aplica)
 
-- `npm run migrate`: Migrate database schemas for models
-- `npm run openapi-spec`: Generate OpenAPI spec into a file
-- `npm run docker:build`: Build a Docker image for this application
-- `npm run docker:run`: Run this application inside a Docker container
+📫 Contacto
+GitHub: tatiana1104
 
-## Tests
+Email: juddytatianavs@hotmailcom
 
-```sh
-npm test
-```
-
-## What's next
-
-Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
-understand how you can continue to add features to this application.
-
-[![LoopBack](https://github.com/loopbackio/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
